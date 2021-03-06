@@ -1,0 +1,16 @@
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\bin\x64\Debug\pwStore.exe.config
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\bin\x64\Debug\pwStore.exe
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\bin\x64\Debug\pwStore.pdb
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore.csprojAssemblyReference.cache
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\View\UI.g.cs
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\App.g.cs
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore_MarkupCompile.cache
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore_MarkupCompile.lref
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\App.baml
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\View\UI.baml
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore.g.resources
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore.Properties.Resources.resources
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore.csproj.GenerateResource.cache
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore.csproj.CoreCompileInputs.cache
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore.exe
+C:\Users\sn98kicker\source\repos\pwStore\pwStore\obj\x64\Debug\pwStore.pdb

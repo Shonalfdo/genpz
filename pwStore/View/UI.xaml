@@ -1,0 +1,282 @@
+﻿<Window x:Class="pwStore.View.UI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pwStore.View"
+        mc:Ignorable="d"
+        Title="Password Manager" ResizeMode="CanMinimize" Height="500" Width="800" FontFamily="Segoe UI Light">
+    <Grid Background="WhiteSmoke">
+
+        <!--#region TAB CONTROLLER එක මෙතනින් පටන්ගන්නේ-->
+        <!--=================================================================================================================================================================-->
+        <TabControl Style="{DynamicResource Ribbon}" SelectedIndex="1">
+            <!--//Overide Background Color-->
+            <TabItem Header="File" Style="{DynamicResource Ribbon_Header}" Background="#FFFF8080">
+
+                <Grid Style="{DynamicResource Workspace}"/>
+            </TabItem>
+
+            <!--=================================================================================================================================================================-->
+            <!--#region Password Store-->
+            <!--=================================================================================================================================================================-->
+
+            <TabItem Header="Store" Style="{DynamicResource Ribbon_Header}">
+                <Grid Style="{DynamicResource Workspace}">
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF006C9E" Offset="0"/>
+                            <GradientStop Color="#FF00AEFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="9*"/>
+                        <ColumnDefinition Width="15*"/>
+                        <ColumnDefinition Width="15*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <!-- Text Blocks -->
+
+                    <!-- Shade Rectangles -->
+                    <Rectangle Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="5" Grid.RowSpan="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#CC959595" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                    <!-- Shade Rectangles -->
+                    <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="12" >
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#0CF5F5F5" Offset="0"/>
+                                <GradientStop Color="#14FFFFFF" Offset="0.992"/>
+                                <GradientStop Color="#1EECECEC" Offset="0.672"/>
+                                <GradientStop Color="#11FFFFFF" Offset="0.208"/>
+                                <GradientStop Color="#14F7F7F7" Offset="0.364"/>
+                                <GradientStop Color="#33D8D8D8" Offset="0.836"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                    <!-- Text Blocks -->
+                    <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White"><Run Text="Platform"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White"><Run Text="User Name"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White"><Run Text="Login By"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White"><Run Text="Phone Number"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White"><Run Text="Password"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White"><Run Text="Re-Enter Password"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White"><Run Text="Comment"/></TextBlock>
+
+                    <!-- Text Blocks -->
+                    <TextBlock Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Text="xxxxxx"/>
+                    <TextBlock Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Text="xxxxxx"/>
+                    <TextBlock Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Text="xxxxxx"/>
+                    <TextBlock Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Text="xxxxxx"/>
+                    <TextBlock Grid.Column="3" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Text="xxxxxx"/>
+                    <TextBlock Grid.Column="3" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Text="xxxxxx"/>
+                    <TextBlock Grid.Column="3" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Text="xxxxxx"/>
+
+                    <TextBlock Grid.Column="2" Grid.Row="10" Margin="20,0,0,0" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Left"  MinWidth="150" Foreground="White" Text="xxxxxx" FontSize="18"/>
+
+                    <!-- Text Blocks -->
+                    <TextBox Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+
+                    <ComboBox Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" Height="18" BorderBrush="{x:Null}" Background="White" Width="200"/>
+
+                    <Button Content="Save" Foreground="Black" Grid.Column="3" HorizontalAlignment="Right" Margin="0,15,05,15" MinWidth="100" Grid.Row="10" Grid.RowSpan="2" Style="{DynamicResource Submit}" VerticalAlignment="Stretch" FontFamily="Segoe UI" FontSize="14"/>
+
+                </Grid>
+            </TabItem>
+            <!--#endregion-->
+            <!--=================================================================================================================================================================-->
+            <!--#region Password View-->
+            <!--=================================================================================================================================================================-->
+            <TabItem Header="View" Style="{DynamicResource Ribbon_Header}">
+                <Grid Style="{DynamicResource Workspace}">
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF006C9E" Offset="0"/>
+                            <GradientStop Color="#FF00AEFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Text Blocks -->
+                    <TextBlock Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Margin="20,0,0,0" Foreground="White"><Run Text="Platform"/></TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Margin="20,0,0,0"  Foreground="White"><Run Text="User Name"/></TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Margin="20,0,0,0"  Foreground="White"><Run Text="Phone Number"/></TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Margin="20,0,0,0"  Foreground="White"><Run Text="Password"/></TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Margin="20,0,0,0"  Foreground="White"><Run Text="Re-Enter Password"/></TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Margin="20,0,0,0"  Foreground="White"><Run Text="Comment"/></TextBlock>
+
+                    <!-- Text Box -->
+                    <TextBox Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="4" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="4" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="4" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="4" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+
+
+                    <!-- Shade Rectangles -->
+                    <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="#FFECECEC" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                    <!-- Text Box-->
+                    <TextBox Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch"  Margin="10,3,10,0"/>
+                    <ComboBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch"  Margin="10,3,10,15"/>
+                    <Button Grid.Column="2" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="18" Margin="20,3,20,0" Content="Search">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFDADADA" Offset="0"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE0E0E0" Offset="0"/>
+                                <GradientStop Color="#FFC7C7C7" Offset="1"/>
+                                <GradientStop Color="LightGray" Offset="0.228"/>
+                                <GradientStop Color="#FFE4E4E4" Offset="0.696"/>
+                            </LinearGradientBrush>
+                        </Button.BorderBrush>
+                    </Button>
+                    <CheckBox Grid.Column="3" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,5,0,0" Foreground="Red">Enable Editing</CheckBox>
+
+                    <!-- Tool Captions -->
+                    <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,1" FontSize="10">Search by keywords</TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,1" FontSize="10">Search by Platform</TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,1" FontSize="10" Grid.ColumnSpan="2">Tools</TextBlock>
+
+                    <!-- Ribbon Splitter -->
+                    <GridSplitter Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="0.2" Margin="0,2,0,2" Background="Black"/>
+                    <GridSplitter Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="0.2" Margin="0,2,0,2" Background="Black"/>
+
+                    <!-- List View -->
+                    <ListView Grid.Column="0" Grid.Row="1" Grid.RowSpan="11" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Platform"/>
+                                <GridViewColumn Header="Username"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <!-- Shade Rectangles -->
+                    <Rectangle Grid.Column="2" Grid.Row="10" Grid.ColumnSpan="5" Grid.RowSpan="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#CC959595" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                    <Button Content="Update" Foreground="Black" Grid.Column="3" HorizontalAlignment="Right" Margin="0,15,05,15" MinWidth="100" Grid.Row="10" Grid.RowSpan="2" Style="{DynamicResource Submit}" VerticalAlignment="Stretch" FontFamily="Segoe UI" FontSize="14"/>
+                    <Button Content="Remove" Foreground="Red" Grid.Column="3" HorizontalAlignment="Right" Margin="0,15,105,15" MinWidth="100" Grid.Row="10" Grid.RowSpan="2" Style="{DynamicResource Submit}" VerticalAlignment="Stretch" FontFamily="Segoe UI" FontSize="14"/>
+                </Grid>
+            </TabItem>
+            <!--#endregion-->
+            <!--=================================================================================================================================================================-->
+            <!--#region Password Maker-->
+            <!--=================================================================================================================================================================-->
+            <TabItem Header="Password Maker" Style="{DynamicResource Ribbon_Header}">
+                <Grid Style="{DynamicResource Workspace}">
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF14A5C5" Offset="0"/>
+                            <GradientStop Color="#FF45DDFF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Text Blocks -->
+                    <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Margin="0,8,0,7"><Run Text="Platform"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Margin="0,7,0,8"><Run Text="User Name"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Margin="0,8,0,7"><Run Text="Login By"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Margin="0,7,0,8"><Run Text="Phone Number"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Margin="0,8,0,7"><Run Text="Password"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Margin="0,7,0,8"><Run Text="Re-Enter Password"/></TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Left" Height="16" Width="150" MinWidth="150" Foreground="White" Margin="0,8,0,7"><Run Text="Comment"/></TextBlock>
+
+                    <!-- Text Box -->
+                    <TextBox Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+                    <TextBox Grid.Column="2" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,9,0,9" MinWidth="200" BorderBrush="{x:Null}" Background="#CCFFFFFF" Height="18" Width="200"/>
+
+                </Grid>
+            </TabItem>
+            <!--=================================================================================================================================================================-->
+            <!--#endregion-->
+            <!--=================================================================================================================================================================-->
+        </TabControl>
+        <!--#endregion-->
+    </Grid>
+</Window>
